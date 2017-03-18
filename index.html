@@ -1,0 +1,8 @@
+<script src="//ulogin.ru/js/ulogin.js"></script>
+<a href="#" id="uLogin" data-ulogin="display=window;theme=flat;fields=first_name,last_name;providers=;hidden=;redirect_uri=http%3A%2F%2Fjbmagination.github.io%2Fulogin-test;mobilebuttons=0;"><img src="http://ulogin.ru/img/button.png?version=img.2.0.0" width=187 height=30 alt="МультиВход"/></a>
+                    $s = file_get_contents('http://ulogin.ru/token.php?token=' . $_POST['token'] . '&host=' . $_SERVER['HTTP_HOST']);
+                    $user = json_decode($s, true);
+                    //$user['network'] - соц. сеть, через которую авторизовался пользователь
+                    //$user['identity'] - уникальная строка определяющая конкретного пользователя соц. сети
+                    //$user['first_name'] - имя пользователя
+                    //$user['last_name'] - фамилия пользователя
